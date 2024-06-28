@@ -1,0 +1,8 @@
+prefix=/root/project_ws/devel
+
+Name: agribot_local_planner
+Description: Description of agribot_local_planner
+Version: 0.0.0
+Cflags: -I/root/project_ws/devel/include
+Libs: -L${prefix}/lib -lagribot_local_planner
+Requires: roscpp tf dynamic_reconfigure costmap_2d geometry_msgs nav_core pluginlib

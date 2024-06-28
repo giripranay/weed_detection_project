@@ -1,0 +1,53 @@
+
+
+#Unzip the project folder
+
+
+#Go to project_ws folder.
+cd project_ws/
+
+
+#Give the ros noetic path
+source /opt/ros/noetic/setup.bash
+
+
+
+#Connect display command: replace below ip with your system ip. I am connecting display because I ran ROS project on docker.
+export DISPLAY=172.23.192.1:0.0
+
+#build the work space.
+catkin_make
+
+#Source the built bash file.
+source devel/setup.bash
+
+Follow each for each terminal
+
+Terminal 1:
+#Launch Farm world and robot.
+roslaunch farm farm_world.launch
+
+Terminal 2:
+
+#Go to scripts folder.
+cd project_ws/src/farm/scripts
+
+#Run below command for robot motion.
+python move.py
+
+
+Terminal 3:
+
+cd project_ws/src/farm/scripts
+
+#to open camera views.
+python on_frontcam.py
+
+
+Terminal 4:
+
+#Go to scripts folder.
+cd project_ws/src/farm/scripts
+
+#Run below command for weed detection.
+python move.py

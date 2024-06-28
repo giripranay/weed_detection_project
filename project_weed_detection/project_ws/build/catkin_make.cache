@@ -1,0 +1,2 @@
+agribot/agribot_control:agribot/agribot_description:agribot/agribot_gazebo:agribot/agribot_joystick:agribot/agribot_local_planner:agribot/agribot_navigation:agribot_launch:farm
+-DCATKIN_DEVEL_PREFIX=/root/project_ws/devel -DCMAKE_INSTALL_PREFIX=/root/project_ws/install -G Unix Makefiles

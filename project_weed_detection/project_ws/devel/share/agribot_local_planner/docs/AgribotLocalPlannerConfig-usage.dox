@@ -1,0 +1,22 @@
+\subsubsection usage Usage
+\verbatim
+<node name="agribot_local_planner" pkg="agribot_local_planner" type="agribot_local_planner">
+  <param name="pos_window" type="double" value="0.7" />
+  <param name="orient_window" type="double" value="0.7" />
+  <param name="pos_precision" type="double" value="0.2" />
+  <param name="orient_precision" type="double" value="0.2" />
+  <param name="max_vel_lin" type="double" value="0.4" />
+  <param name="min_vel_lin" type="double" value="0.0" />
+  <param name="max_incr_lin" type="double" value="0.3" />
+  <param name="max_vel_ang" type="double" value="0.4" />
+  <param name="min_vel_ang" type="double" value="-0.4" />
+  <param name="max_incr_ang" type="double" value="0.25" />
+  <param name="k_p_lin" type="double" value="2.0" />
+  <param name="k_i_lin" type="double" value="0.04" />
+  <param name="k_d_lin" type="double" value="0.0" />
+  <param name="k_p_ang" type="double" value="2.0" />
+  <param name="k_i_ang" type="double" value="0.0" />
+  <param name="k_d_ang" type="double" value="0.0" />
+</node>
+\endverbatim
+

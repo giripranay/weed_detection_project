@@ -1,0 +1,21 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~pos_window" : \b [double] Position window (x,y) min: 0.0, default: 0.7, max: 1.0
+- \b "~orient_window" : \b [double] Orientation window (th) min: 0.0, default: 0.7, max: 3.14
+- \b "~pos_precision" : \b [double] Goal position tolerance min: 0.0, default: 0.2, max: 1.0
+- \b "~orient_precision" : \b [double] Goal orientation tolerance min: 0.0, default: 0.2, max: 3.14
+- \b "~max_vel_lin" : \b [double] Max linear velocity min: 0.0, default: 0.4, max: 0.6
+- \b "~min_vel_lin" : \b [double] Min linear velocity min: 0.0, default: 0.0, max: 1.0
+- \b "~max_incr_lin" : \b [double] Max linear acceleration min: 0.0, default: 0.3, max: 0.5
+- \b "~max_vel_ang" : \b [double] Max angular velocity min: 0.0, default: 0.4, max: 0.5
+- \b "~min_vel_ang" : \b [double] Min angular velocity min: -1.0, default: -0.4, max: 0.0
+- \b "~max_incr_ang" : \b [double] Max angular acceleration min: 0.0, default: 0.25, max: 5.0
+- \b "~k_p_lin" : \b [double] Proportional gain for linear velocity min: 0.0, default: 2.0, max: 10.0
+- \b "~k_i_lin" : \b [double] Integral gain for linear velocity min: 0.0, default: 0.04, max: 2.0
+- \b "~k_d_lin" : \b [double] Derivative gain for linear velocity min: 0.0, default: 0.0, max: 10.0
+- \b "~k_p_ang" : \b [double] Proportional gain for angular velocity min: 0.0, default: 2.0, max: 10.0
+- \b "~k_i_ang" : \b [double] Integral gain for linear velocity min: 0.0, default: 0.0, max: 2.0
+- \b "~k_d_ang" : \b [double] Derivative gain for linear velocity min: 0.0, default: 0.0, max: 10.0
+
