@@ -1,53 +1,80 @@
+# Farm Robot Project
 
+This project simulates a farm robot operating within a ROS (Robot Operating System) environment.  The robot is designed to navigate the farm world, perform weed detection, and potentially other tasks (like motion).
 
-#Unzip the project folder
+## Setup and Running
 
+These instructions assume you have ROS Noetic installed. If you don't, please refer to the official ROS installation guide for Noetic.
 
-#Go to project_ws folder.
-cd project_ws/
+1.  **Unzip the Project Folder:**
 
+    Unzip the project archive to your desired location.
 
-#Give the ros noetic path
-source /opt/ros/noetic/setup.bash
+2.  **Navigate to the Workspace:**
 
+    ```bash
+    cd project_ws/
+    ```
 
+3.  **Source ROS Noetic:**
 
-#Connect display command: replace below ip with your system ip. I am connecting display because I ran ROS project on docker.
-export DISPLAY=172.23.192.1:0.0
+    ```bash
+    source /opt/ros/noetic/setup.bash
+    ```
 
-#build the work space.
-catkin_make
+4.  **Configure Display (If Needed):**
 
-#Source the built bash file.
-source devel/setup.bash
+    If you are running this project within a Docker container or a remote environment, you may need to set the `DISPLAY` environment variable. Replace `172.23.192.1` with your system's IP address. This is *only* necessary if you are having issues with visualizing the simulation.
 
-Follow each for each terminal
+    ```bash
+    export DISPLAY=172.23.192.1:0.0  # Replace with your IP
+    ```
 
-Terminal 1:
-#Launch Farm world and robot.
+5.  **Build the Workspace:**
+
+    ```bash
+    catkin_make
+    ```
+
+6.  **Source the Workspace Setup:**
+
+    ```bash
+    source devel/setup.bash
+    ```
+
+## Running the Simulation (Open multiple terminals)
+
+Open four separate terminals and follow the instructions below in each terminal.  Remember to source the `devel/setup.bash` file in *each* new terminal you open.
+
+**Terminal 1: Launch Farm World and Robot**
+
+```bash
 roslaunch farm farm_world.launch
+```
 
-Terminal 2:
+**Terminal 2: Robot Motion**
 
-#Go to scripts folder.
+```Bash
+
 cd project_ws/src/farm/scripts
 
-#Run below command for robot motion.
 python move.py
 
+```
 
-Terminal 3:
+
+**Terminal 3: Camera Views**
+
+```Bash
 
 cd project_ws/src/farm/scripts
-
-#to open camera views.
 python on_frontcam.py
+```
 
+**Terminal 4: Weed Detection**
 
-Terminal 4:
+```Bash
 
-#Go to scripts folder.
 cd project_ws/src/farm/scripts
-
-#Run below command for weed detection.
-python move.py
+python weed_detection.py  # Corrected filename to weed_detection.py (assuming this is the cor
+```
